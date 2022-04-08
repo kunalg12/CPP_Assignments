@@ -2,25 +2,27 @@
 #include<conio.h>
 int main()
 {
-	int num1,num2,num3;
+	int a,b,c;
 	clrscr();
-	cout<<"Enter first number\n";
-	cin>>num1;
-	cout<<"Enter second number\n";
-	cin>>num2;
-	cout<<"Enter third number\n";
-	cin>>num3;
-	if(num1>num2&&num1>num3)
+
+	cout<<"Enter any three numbers\n";
+	cout<<"a = ";
+	cin>>a;
+	cout<<"b = ";
+	cin>>b;
+	cout<<"c = ";
+	cin>>c;
+	if(a>b && a>c)
 	{
-		cout<<num1<<" is Maximum";
+		cout<<"A is Max";
 	}
-	else if(num2>num1&&num2>num3)
+	else if(b>a && b>c)
 	{
-		cout<<num2<<" is Maximum";
+		cout<<"B is Max";
 	}
-	else if(num3>num2&&num3>num1)
+	else if(c>a && c>b)
 	{
-		cout<<num3<<" is Maximum";
+		cout<<"C is Max";
 	}
 	getch();
 	return 0;
