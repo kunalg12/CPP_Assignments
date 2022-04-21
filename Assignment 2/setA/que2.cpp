@@ -17,7 +17,7 @@ class DISTANCE
     int feet ,inches;
     public  : 
     void setData(void);
-    int addobj(DISTANCE obj1,DISTANCE obj2);
+    int addobj(DISTANCE obj1);
     void output(void);
 };
 void DISTANCE :: setData(void)
@@ -26,12 +26,15 @@ void DISTANCE :: setData(void)
     cin>>feet>>inches;
 
 }
-int DISTANCE :: addobj(DISTANCE obj1,DISTANCE obj2)
+int DISTANCE :: addobj(DISTANCE obj1)
 {
-    feet = obj1.feet + obj2.feet;
-    inches = obj1.inches+obj2.inches;
-    feet = feet + (inches / 12);
-	inches = inches % 12;
+	DISTANCE temp;
+	temp.feet = feet.obj1.feet;
+	temp.inches = inches.obj1.inches;
+	
+    
+    	return temp;
+	
 
 }
 void DISTANCE :: output(void)
@@ -41,12 +44,12 @@ void DISTANCE :: output(void)
 }
 int main()
 {
-    DISTANCE obj1,obj2;
+    DISTANCE obj1,obj2,obj3;
     cout<<"For Object 1"<<endl;
     obj1.setData();
     cout<<"For Object 2"<<endl;
     obj2.setData();
-    obj1.addobj(obj1,obj2);
-    obj1.output();
+	obj3 = obj1.add(obj(obj2));
+	obj3.output();
     return 0;
 }
