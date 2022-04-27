@@ -11,19 +11,19 @@ class root
 
     public  : 
     void getdata(void);
-    inline void sq(void);
-    inline void cb(void);
+    void sq(void);
+     void cb(void);
 };
-void root :: getdata(void)
+ void root :: getdata(void)
 {
     cout<<"Enter number"<<endl;
     cin>>number;
 }
-void root::sq(void)
+inline void root::sq(void)
 {
     cout<<"The square root of the number is : "<<sqrt(number);
 }
-void root::cb(void)
+inline void root::cb(void)
 {
     cout<<"The cube root of the number is : "<<cbrt(number);
 }
