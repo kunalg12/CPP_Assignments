@@ -1,57 +1,40 @@
-/*
-    Write the definition for a class called Cylinder that contains data members radius and 
-    height. The class has the following member functions : 
-    a. void setradius(float) to set the radius of data member
-    b. void setheight(float) to set the height of data member
-    c. float volume() to calculate and return the volume of the cylinder
-    d. float area() to calculate and return the area of the cylinder
-
-    write a C++ program to create two cylinder objects and display each cylinder and its area
-    and volume
-
-*/
-#include<iostream>
+#include<iostream.h>
 #include<conio.h>
-using namespace std;
 class Cylinder{
     private : 
-    float rad,height;
+    float radius,height;
 
     public  : 
-    void setradius(float);
-    void setheight(float);
-    float volume();
-    float area();
+        void setradius(float radius)
+        {
+            this.radius = radius;
+        }
+        void setheight(float height)
+        {
+            this.height = height;
+        }
+        float volume()
+        {
+            float volume = 3.14*(radius*radius)*height;
+            return volume;
+        }
+        float area()
+        {
+            float Area = (2*3.14*rad*height)+(2*3.14*rad*rad);
+            return Area;
+        }
 };
-void Cylinder :: setradius(float radi)
+
+void main()
 {
-    rad = radi;
-}
-void Cylinder :: setheight(float hei)
-{
-    height = hei;
-}
-float Cylinder :: volume()
-{
-    float vol = 3.14*(rad*rad)*height;
-    return vol;
-}
-float Cylinder :: area()
-{
-    float A = (2*3.14*rad*height)+(2*3.14*rad*rad);
-    return A;
-}
-int main()
-{
-    Cylinder cyl;
-    float radi,hei,volume,area;
+    Cylinder cylinder;
+    float radius,height,volume,area;
     cout<<"Enter radius and Height"<<endl;
-    cin>>radi>>hei;
-    cyl.setradius(radi);
-    cyl.setheight(hei);
-    volume = cyl.volume();
-    area   = cyl.area();
+    cin>>radius>>height;
+    cylinder.setradius(radius);
+    cylinder.setheight(height);
+    volume = cylinder.volume();
+    area   = cylinder.area();
     cout<<"Volume : "<<volume<<endl;
-    cout<<"Area   : "<<area<<endl;
-    return 0;
+    cout<<"Area : "<<area<<endl;
 }
