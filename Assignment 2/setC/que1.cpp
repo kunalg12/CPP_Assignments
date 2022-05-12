@@ -1,55 +1,40 @@
-/*
-Write a C++ program to create a class employee having empno, name, basic, da, hra, allowances.
-Write necessary member functions to accept and display details of employee. And generate a payslip
-using appropriate manipulators for formatted display.
-*/
-
-#include<iostream>
-#include<iomanip>
+#include<iostream.h>
 #include<string.h>
 #include<conio.h>
-using namespace std;
-class emp
+class employee
 {
     private :
     int empno,basic,da,hra,allowances; 
     char name[30];
     public :   
-    void getData(int no,int bas,char name1[30]);
-    void display(void);
-};
-void emp :: getData(int no,int bas,char name1[30])
-{
-    empno = no;
-    basic = bas;
-    da = 0.25*bas;
-    hra = 800;
-    allowances = basic+hra+da;
-    strcpy(name,name1);
-}
-void emp ::display(void)
-{
-    cout<<setw(15)<<"Employee No : "<<empno<<endl;
-    cout<<setw(15)<<"Basic Salary : "<<basic<<endl;
-    cout<<setw(15)<<"Hra : "<<hra<<endl;
-    cout<<setw(15)<<"DA : "<<da<<endl;
-    cout<<setw(15)<<"Allowance : "<<allowances<<endl;
-    
-}
-int main()
-{
-    int id,bas;
-    char name[30];
-    cout<<"Enter Emp No : ";
-    cin>>id;
-    cout<<"Enter Emp Name : ";
-    cin>>name;
-    cout<<"Enter Basic Salary : ";
-    cin>>bas;
+        void accept(int empno,int basic,char name[30])
+        {
+            strcpy(this.name,name);
+            this.empno = empno;
+            this.basic = bas;
+            da = 0.25*bas;
+            hra = 800;
+            allowances = basic+hra+da;
+        }
+        void display()
+        {
+            cout<<"Employee No : "<<empno<<endl;
+            cout<<"Base Pay : "<<basic<<endl;
+            cout<<"HRA : "<<hra<<endl;
+            cout<<"DA : "<<da<<endl;
+            cout<<"Allowance : "<<allowances<<endl;
 
-    emp e1;
-    e1.getData(id,bas,name);
-    e1.display();
-   
-    return 0;
+        }
+};
+
+void main()
+{
+    employee e1;
+    int emp_no,basic;
+    char name[30];
+    cout<<"Enter Employee No, Employee Name and Base Pay : ";
+    cin>>emp_no>>name>>basic;
+    e1.accept(id,bas,name);
+    e1.display();  
+
 }
