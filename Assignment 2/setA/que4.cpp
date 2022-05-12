@@ -68,7 +68,7 @@ class STRING
 
 void main()
 {
-    STRING S1;
+    STRING strinOperation;
     int option;
     S1.setstr();
     cout << "Enter 1. Find length of strings" << endl;
@@ -79,16 +79,16 @@ void main()
     switch(option)
     {
         case 1: 
-          S1.len();
+          strinOperation.len();
           break;
         case 2: 
-            S1.concat();
+            strinOperation.concat();
             break;
         case 3: 
-             S1.rev();
+             strinOperation.rev();
             break;
         case 4:
-             S1.cmp();
+             strinOperation.cmp();
              break;
         case 5: 
             exit(0);
