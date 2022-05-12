@@ -1,19 +1,13 @@
-// Write a C++ program to generate multiplication table
-
-#include<iostream>
-#include<iomanip>
+#include<iostream.h>
 #include<conio.h>
-using namespace std;
  
-int main()
+void main()
 {
-    int num,i;
-    cout<<"Enter number you want multiplication of : "<<endl;
-    cin>>num;
+    int number,i;
+    cout<<"Enter the Multiplication Table No "<<endl;
+    cin>>number;
     for(i = 1;i<=10;i++)   
     {
-        cout<<num<<" X "<<i<< " = "<<num*i<<endl;
+        cout<<number*i<<endl;
     }
-    return 0;
 }
-// 1.18.54
